@@ -9,14 +9,14 @@ in nonlinear and nonstationary problems.
 
 * [`EEMD()`](#eemd): ensemble EMD, to decompose a 1D signal into a robust set of IMFs
   plus a residue. 
-<!-- TODO: add CEEMDAN -->
+
+* [`CEEMDAN()`](#ceemdan): ensemble EMD, to decompose a 1D signal into a robust set of IMFs
+  plus a residue.
 
 ## EMD
 
 The `EMD()` function can be used to extract Intrinsic Mode Functions (IMFs)
 from a uniformly sampled periodic signal.
-
-#### `EMD()` Parameters
 
 - `EMD(signal, imfs, residue, maxImfs = 10 , maxSiftIter = 50, tol = 1e-3)`
    * `signal` is a [column vector](../../matrices.md#representing-data-in-mlpack) containing the 1D signal
@@ -106,8 +106,6 @@ for (size_t k = 0; k < numToShow; ++k)
 
 The `EEMD()` function wraps [`EMD()`](#emd) to output more robust IMFs by using an
 ensemble approach.
-
-#### `EEMD()` Parameters
 
 - `EEMD(signal, imfs, residue, ensSize = 100, noiseStrength = 0.2, maxImfs = 10, maxSiftIter = 50, tol = 1e-3)`
 
